@@ -18,9 +18,29 @@ body {
 }
 .cards {
   max-width: 90%;
-  margin: 0 auto;
+  margin: 0 auto; 
+  /* makes the child element center  */
   display: grid;
   grid-gap: 1rem;
+  /* gap between grids */
+}
+/* Media Queries */
+/* Tablet and up - display 2 columns  */
+@media only screen and (min-width:768px) {  
+  .cards {
+    grid-template-columns: repeat(2,1fr);
+
+    /* Repeat - (# columns, 1fr (1 fraction) or can use percentage base on percentage [explore more techniques] */
+    /* 758 is the best target for columns ; the rest should we stack */
+
+  }
+}
+/* Laptop/Destop - display 3 columns */
+@media only screen and (min-width:992px) {
+  .cards {
+    /* grid-template-columns: repeat(3, 1fr); equal witdth */
+    grid-template-columns: 20% 60% 20%;
+  }
 }
 
 </style>
